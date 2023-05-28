@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} New Note {% endblock %} {% block
+style %}
+<!-- Include stylesheet -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+/>
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+{% endblock %} {% block content %}
+<div class="" id="root">
+  <div class="sidebar">
+    {% include 'sidebar.html' %}
+  </div>
+  <div class="container my-4 p-2 mx-auto">
+    {% include'editor.html' %}
+    {% include 'notes.html' %}
+</div>
+</div>
+{% endblock %} {% block script %}
+<!-- Initialize Quill editor -->
+<script type="module" src="{{url_for('static',filename='js/index.js')}}"></script>
+{% endblock %}

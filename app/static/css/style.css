@@ -1,0 +1,150 @@
+:root{
+    --grey:rgba(240, 240, 240, .6);
+    --danger:#e22008;
+    --light-yellow:#FEEFC3;
+    /* shadow */
+    --box-shadow-sm: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    --box-shadow-light:rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+/* global selectors */
+input{
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+}
+ion-icon:hover{
+    box-shadow: var(--box-shadow-light);
+    background-color: red;
+}
+/* root */
+#root{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+/* header */
+header ion-icon{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+header ion-icon:hover{
+    background-color: var(--grey);
+    padding: 5px;
+}
+header .nav-center{
+    width: 50%;
+}
+header .search-bar{
+    background-color: var(--grey);
+}
+header .search-bar:hover{
+    box-shadow: var(--box-shadow-sm);
+}
+header input{
+    text-indent: 10px;
+}
+/* sidebar */
+.sidebar{
+    max-width:fit-content;
+    box-shadow: var(--box-shadow-sm);
+}
+.sidebar .nav-item-wraper{
+    border-radius: 30px;
+}
+.sidebar .nav-item ion-icon{
+    font-size: 22px;
+    padding: 5px;
+    background-color: var(--light-yellow);
+    border-radius: 50%;
+}
+.sidebar .nav-item a{
+    display: none;
+}
+.sidebar.show-sidebar  a{
+    display: block;
+}
+
+/* editor */
+.editor{
+    max-width: 650px;
+    box-shadow: var(--box-shadow-sm);
+}
+.editor input{
+    font-weight: bold;
+}
+.editor .note-content{
+    outline: none;
+    border: none;
+    max-height: 200px;
+    overflow-y: scroll;
+    font-size: 15px;
+}
+.editor ion-icon{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.editor ion-icon:hover{
+    background-color: var(--grey);
+    padding: 5px;
+}
+.editor .editor-tools ion-icon{
+    font-size: 16px;
+    margin-right: 6px;
+}
+.editor .tools-wraper{
+    position: absolute;
+    z-index: 1;
+}
+.editor .tools-wraper .color-picker-item{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 6px;
+}
+.editor .tools-wraper .color-picker-item:hover{
+    box-shadow: var(--box-shadow-light);
+}
+/* notes */
+.notes{
+    max-width: 650px;
+}
+
+.notes >div:hover{
+    box-shadow: var(--box-shadow-sm);
+}
+.notes input{
+    font-weight: bold;
+}
+.notes .note-content{
+    outline: none;
+    border: none;
+    max-height: 200px;
+    word-wrap: break-word;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+.notes .note-content *{
+    background-color: transparent!important;
+    font-size: 16px!important;
+}
+.notes ion-icon{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.notes .editor-tools ion-icon{
+    font-size: 16px;
+    margin-right: 6px;
+}
+.notes ion-icon:hover{
+    background-color: var(--grey);
+    padding: 5px;
+}
+.notes.grid {
+    columns: 2;
+}
